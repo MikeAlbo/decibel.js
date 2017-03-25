@@ -1,6 +1,9 @@
 # Decibel.js
 readme
 
+## Demo
+[Demo Page]( https://mikealbo.github.io/decibel.js/)
+
 ## Important Note
 The web audio api used by decibal.js does not currently work with IE and older releases of Firefox, Chrome, Safari, or Opera.
 
