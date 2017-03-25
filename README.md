@@ -2,16 +2,16 @@
 readme
 
 ## Important Note
-    The web audio api used by decibal.js does not currently work with IE and older releases of Firefox, Chrome, Safari, or Opera.
+The web audio api used by decibal.js does not currently work with IE and older releases of Firefox, Chrome, Safari, or Opera.
 
 ## About
-    Decibal.js streamlines the importing, decoding, and playback of audio files using the Web Audio Api. 
+Decibal.js streamlines the importing, decoding, and playback of audio files using the Web Audio Api. 
 
 ## Instructions
 
 ### Create an array of audio files
 
-you can create an array of links, or a 2d array of fileNames and links
+you can create an array of links, or a 2d array of file names and links
 
 an array containing only links
 ``` javascript
@@ -20,14 +20,14 @@ var source = ['../audioFiles/example.mp3']; //returns {src1 : AudioBuffer }
 
 an 2d array of source names and links
 ``` javascript
-var source = [['exAudio1', '../audioFiles/example.mp3']]; // return {exAudio1 : AudioBuffer}
+var source = [['exAudio1', '../audioFiles/example.mp3']]; // returns {exAudio1 : AudioBuffer}
 ```
 
 ### new Decibel
-create a new instance of decibal
+create a new instance of decibel
 
 ``` javascript
-var auido = new Decibal();
+var auido = new Decibel();
 ```
 
 ### Store Decoded Files
@@ -40,7 +40,7 @@ var audioFiles;
 the decodeAudioFiles method takes in an array and returns an object using a promise structure
 
 ``` javascript
-audio.decodeAudioFiles(testSource).then(function(decoded){
+audio.decodeAudioFiles(source).then(function(decoded){
     // success
     audioFiles = decoded;
     console.log("audioFiles loaded");
