@@ -10,6 +10,8 @@
         
 */
 
+"use strict";
+
 // create a new instance of decibel
 var audio = new decibel();
 
@@ -18,10 +20,10 @@ var audioFiles;
 
 // demo audio sources
 var testSource = [                                  // **demo**
-    '../audioFiles/simonSound1.mp3',                // string
-    ['src2','../audioFiles/simonSound2.mp3'],      // array
-    '../audioFiles/simonSound3.mp3',                // string
-    ['src4','../audioFiles/simonSound4.mp3']       // array    
+    "https://s3.amazonaws.com/decibeldemo/simonSound1.mp3",                // string
+    ["src2","https://s3.amazonaws.com/decibeldemo/simonSound2.mp3"],      // array
+    "https://s3.amazonaws.com/decibeldemo/simonSound3.mp3",                // string
+    ["src4","https://s3.amazonaws.com/decibeldemo/simonSound4.mp3"]       // array
 ];
 
 // decode audio files
