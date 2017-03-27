@@ -4,6 +4,8 @@
     <option browser="true" />
     <option maxerr="50" />
     <option node="true" />
+    <option single="true" />
+    <option this="true" />
     <option white="true" />
   </component>
 </project>
