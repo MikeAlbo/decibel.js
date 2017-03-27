@@ -71,9 +71,16 @@ once the audio files have been loaded, you can use the playback method to play t
 audio.playback(audioFiles.src1);
 ```
 
-## Feature Request
-If there's an issue or a feature you'd like to see added, please create an issue or fork the repo
+## Future Objectives
+1. control facades for play, stop, rewind, fastforward
+2. effect facades for audio tracks
+3. dynamic playback controls (speed, length)
+4. track/ file selection
+5. track editing
+6. live stream facades
+7. and many more...
+
 
 ## License 
-to be added
+MIT
 

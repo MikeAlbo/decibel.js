@@ -1,10 +1,26 @@
 "use strict";
-var ctx; // global webAudio api var
+//var ctx; // global webAudio api var
+//
+//window.addEventListener("load", init, false);
+//
+//// init the audio context
+//function init() {
+//    try {
+//        window.AudioContext = window.AudioContext || window.webkitAudioContext;
+//        ctx = new AudioContext();
+//        console.log("AudioContext created!");
+//    }
+//    catch (e) {
+//        alert("Web Audio not supported in your browser, please try a newer release of Safari, Chrome, or Firefox");
+//    }
+//}
 
-window.addEventListener("load", init, false);
-
-// init the audio context
-function init() {
+// decibel constructor
+function decibel() {
+    
+    var ctx;
+    
+    function init() {
     try {
         window.AudioContext = window.AudioContext || window.webkitAudioContext;
         ctx = new AudioContext();
@@ -13,10 +29,9 @@ function init() {
     catch (e) {
         alert("Web Audio not supported in your browser, please try a newer release of Safari, Chrome, or Firefox");
     }
-}
-
-// decibel constructor
-function decibel() {
+    }
+    
+    window.addEventListener("load", init, false);
 
     // decode audio files
     this.decodeAudioFiles = function (audioSources) {
@@ -90,6 +105,7 @@ function decibel() {
     this.playback = function (buffer) {
         var source = ctx.createBufferSource();
         source.buffer = buffer;
+        console.log(ctx.destination);
         source.connect(ctx.destination);
         source.start(0);
     }; // playback
