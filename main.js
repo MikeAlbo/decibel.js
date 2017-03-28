@@ -25,7 +25,13 @@ var testSource = [                                  // **demo**
     "https://s3.amazonaws.com/decibeldemo/simonSound3.mp3",                // string
     ["src4","https://s3.amazonaws.com/decibeldemo/simonSound4.mp3"]       // array
 ];
-/ / error
+
+audio.decodeAudioFiles(testSource).then(function(decoded){
+    // success
+    audioFiles = decoded;
+    console.log("audio files loaded");
+}).catch(function(err){
+    //error
     console.error(err);
 });
 
